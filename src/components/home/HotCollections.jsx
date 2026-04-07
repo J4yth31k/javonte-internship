@@ -5,6 +5,60 @@ import Skeleton from "../UI/Skeleton";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+const PrevArrow = ({ onClick }) => (
+  <button
+    className="slick-prev-custom"
+    onClick={onClick}
+    style={{
+      position: "absolute",
+      left: "-20px",
+      top: "50%",
+      transform: "translateY(-50%)",
+      zIndex: 10,
+      background: "#fff",
+      border: "none",
+      borderRadius: "50%",
+      width: "40px",
+      height: "40px",
+      boxShadow: "0 2px 8px rgba(0,0,0,0.2)",
+      cursor: "pointer",
+      fontSize: "18px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+    }}
+  >
+    &#8249;
+  </button>
+);
+
+const NextArrow = ({ onClick }) => (
+  <button
+    className="slick-next-custom"
+    onClick={onClick}
+    style={{
+      position: "absolute",
+      right: "-20px",
+      top: "50%",
+      transform: "translateY(-50%)",
+      zIndex: 10,
+      background: "#fff",
+      border: "none",
+      borderRadius: "50%",
+      width: "40px",
+      height: "40px",
+      boxShadow: "0 2px 8px rgba(0,0,0,0.2)",
+      cursor: "pointer",
+      fontSize: "18px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+    }}
+  >
+    &#8250;
+  </button>
+);
+
 const HotCollections = () => {
   const [collections, setCollections] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -16,6 +70,8 @@ const HotCollections = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2500,
+    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
     responsive: [
       {
         breakpoint: 1200,
