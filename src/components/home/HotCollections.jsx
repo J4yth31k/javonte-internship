@@ -114,10 +114,10 @@ const HotCollections = () => {
             </div>
           </div>
 
-          <div className="col-lg-12">
+          <div className="col-lg-12" style={{ position: "relative" }}>
             <Slider {...settings}>
               {loading
-                ? new Array(4).fill(0).map((_, index) => (
+                ? new Array(6).fill(0).map((_, index) => (
                     <div key={index} className="px-2">
                       <div className="nft_coll">
                         <div className="nft_wrap">
@@ -136,7 +136,7 @@ const HotCollections = () => {
                         </div>
                         <div
                           className="nft_coll_info"
-                          style={{ paddingTop: "12px" }}
+                          style={{ paddingTop: "40px" }}
                         >
                           <Skeleton
                             width="120px"
