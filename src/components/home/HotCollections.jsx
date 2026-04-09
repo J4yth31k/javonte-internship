@@ -108,13 +108,13 @@ const HotCollections = () => {
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
-            <div className="text-center">
+            <div className="text-center" data-aos="fade-up">
               <h2>Hot Collections</h2>
               <div className="small-border bg-color-2"></div>
             </div>
           </div>
 
-          <div className="col-lg-12" style={{ position: "relative" }}>
+          <div className="col-lg-12" data-aos="fade-in" data-aos-delay="200" style={{ position: "relative" }}>
             <Slider {...settings}>
               {loading
                 ? new Array(6).fill(0).map((_, index) => (
