@@ -215,7 +215,7 @@ const NewItems = () => {
                                   <i className="fa fa-twitter fa-lg"></i>
                                 </a>
                                 <a
-                                  href="mailto:?"
+                                  href="mailto:"
                                   target="_blank"
                                   rel="noreferrer"
                                 >

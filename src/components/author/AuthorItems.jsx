@@ -68,7 +68,7 @@ const AuthorItems = ({ nftCollection, authorImage, authorId, loading }) => {
                             >
                               <i className="fa fa-twitter fa-lg"></i>
                             </a>
-                            <a href="mailto:?" target="_blank" rel="noreferrer">
+                            <a href="mailto:" target="_blank" rel="noreferrer">
                               <i className="fa fa-envelope fa-lg"></i>
                             </a>
                           </div>
