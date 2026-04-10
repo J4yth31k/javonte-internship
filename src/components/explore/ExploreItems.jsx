@@ -19,6 +19,7 @@ const CountdownTimer = ({ expiryDate }) => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
     return () => clearInterval(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [expiryDate]);
 
   if (!timeLeft) return null;
