@@ -12,6 +12,8 @@ const AuthorItems = ({ nftCollection, authorImage, authorId, loading }) => {
                 <div
                   className="col-lg-3 col-md-6 col-sm-6 col-xs-12"
                   key={index}
+                  data-aos="fade-up"
+                  data-aos-delay={((index % 4) * 100).toString()}
                 >
                   <div className="nft__item">
                     <div className="author_list_pp">
@@ -28,10 +30,12 @@ const AuthorItems = ({ nftCollection, authorImage, authorId, loading }) => {
                   </div>
                 </div>
               ))
-            : (nftCollection || []).map((nft) => (
+            : (nftCollection || []).map((nft, index) => (
                 <div
                   className="col-lg-3 col-md-6 col-sm-6 col-xs-12"
                   key={nft.id}
+                  data-aos="fade-up"
+                  data-aos-delay={((index % 4) * 100).toString()}
                 >
                   <div className="nft__item">
                     <div className="author_list_pp">
@@ -64,7 +68,7 @@ const AuthorItems = ({ nftCollection, authorImage, authorId, loading }) => {
                             >
                               <i className="fa fa-twitter fa-lg"></i>
                             </a>
-                            <a href="mailto:?" target="_blank" rel="noreferrer">
+                            <a href="mailto:" target="_blank" rel="noreferrer">
                               <i className="fa fa-envelope fa-lg"></i>
                             </a>
                           </div>

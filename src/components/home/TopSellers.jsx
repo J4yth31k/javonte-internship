@@ -26,7 +26,7 @@ const TopSellers = () => {
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
-            <div className="text-center">
+            <div className="text-center" data-aos="fade-up">
               <h2>Top Sellers</h2>
               <div className="small-border bg-color-2"></div>
             </div>
@@ -58,8 +58,12 @@ const TopSellers = () => {
                       </div>
                     </li>
                   ))
-                : sellers.map((seller) => (
-                    <li key={seller.id}>
+                : sellers.map((seller, index) => (
+                    <li
+                      key={seller.id}
+                      data-aos="fade-up"
+                      data-aos-delay={((index % 4) * 100).toString()}
+                    >
                       <div className="author_list_pp">
                         <Link to={`/author/${seller.authorId}`}>
                           <img
