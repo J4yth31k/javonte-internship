@@ -89,9 +89,13 @@ const ExploreItems = () => {
                   <Skeleton width="100%" height="200px" borderRadius="8px" />
                 </div>
                 <div className="nft__item_info" style={{ marginTop: "12px" }}>
-                  <Skeleton width="140px" height="20px" borderRadius="4px" />
-                  <br />
-                  <Skeleton width="80px" height="16px" borderRadius="4px" />
+                  <Skeleton width="140px" height="22px" borderRadius="4px" />
+                  <div className="nft__item_price" style={{ marginTop: "8px" }}>
+                    <Skeleton width="80px" height="18px" borderRadius="4px" />
+                  </div>
+                  <div className="nft__item_like" style={{ marginTop: "8px" }}>
+                    <Skeleton width="50px" height="16px" borderRadius="4px" />
+                  </div>
                 </div>
               </div>
             </div>

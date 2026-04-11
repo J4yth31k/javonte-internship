@@ -62,7 +62,7 @@ const Author = () => {
                         <img src={author?.authorImage} alt={author?.authorName} />
                       )}
 
-                      <i className="fa fa-check"></i>
+                      {!loading && <i className="fa fa-check"></i>}
                       <div className="profile_name">
                         <h4>
                           {loading ? (

@@ -91,7 +91,11 @@ const ItemDetails = () => {
 
                   <div className="d-flex flex-row">
                     <div className="mr40">
-                      <h6>Owner</h6>
+                      {loading ? (
+                        <Skeleton width="60px" height="16px" borderRadius="4px" />
+                      ) : (
+                        <h6>Owner</h6>
+                      )}
                       <div className="item_author">
                         <div className="author_list_pp">
                           <Link to={`/author/${item?.ownerId}`}>
@@ -133,7 +137,11 @@ const ItemDetails = () => {
 
                   <div className="de_tab tab_simple">
                     <div className="de_tab_content">
-                      <h6>Creator</h6>
+                      {loading ? (
+                        <Skeleton width="60px" height="16px" borderRadius="4px" />
+                      ) : (
+                        <h6>Creator</h6>
+                      )}
                       <div className="item_author">
                         <div className="author_list_pp">
                           <Link to={`/author/${item?.creatorId}`}>
@@ -172,7 +180,11 @@ const ItemDetails = () => {
                     </div>
 
                     <div className="spacer-40"></div>
-                    <h6>Price</h6>
+                    {loading ? (
+                      <Skeleton width="50px" height="16px" borderRadius="4px" />
+                    ) : (
+                      <h6>Price</h6>
+                    )}
                     <div className="nft-item-price">
                       <img src={EthImage} alt="ETH" />
                       {loading ? (
